@@ -1,10 +1,16 @@
 <template>
   <div>
-    house
+
   </div>
 </template>
 <script>
-  export default{}
+  export default{
+    data () {
+      return {
+        selected: ''
+      }
+    }
+  }
 </script>
 <style>
 
