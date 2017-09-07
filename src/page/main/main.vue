@@ -1,7 +1,7 @@
 <template>
   <div>
     <router-view></router-view>
-    <mt-tabbar v-model="selected">
+    <mt-tabbar v-model="selected" class="tabber">
       <mt-tab-item id="tab1">
         <img slot="icon" src="../../assets/logo.png">
         <router-link to="/main/home">首页</router-link>
@@ -31,5 +31,8 @@
   }
 </script>
 <style>
-
+  .tabber{
+    position: fixed;
+    bottom: 0;
+  }
 </style>
