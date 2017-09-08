@@ -2,7 +2,7 @@
   <div class="home">
     <div>
       <app></app>
-      <search></search>
+
       <lunbo></lunbo>
       <bodyNav></bodyNav>
       <touTiao></touTiao>
@@ -16,7 +16,7 @@
 <script>
   import app from './header-app.vue'
   import lunBo from './lunbo.vue'
-  import search from './search.vue'
+
   import bodyNav from './nav/list.vue'
   import touTiao from './toutiao.vue'
   import baiKe from './baiKe.vue'
@@ -31,7 +31,6 @@
     components: {
       app: app,
       lunbo: lunBo,
-      search,
       bodyNav,
       touTiao,
       baiKe,
