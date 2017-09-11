@@ -9,7 +9,7 @@
         <ul class="fang">
           <li><a href=""><span>二手房</span></a></li>
           <li><a href=""><span>新房</span></a></li>
-          <li><a href=""><span>购房宝典</span></a></li>
+          <li><a href=""><span style="margin-left: 5px">购房宝典</span></a></li>
           <li><a href=""><span>租房</span></a></li>
           <li><a href=""><span>换房</span></a></li>
         </ul>
@@ -51,8 +51,10 @@
     text-align: center;
     text-decoration: none;
     font-size: 12px;
-
     color: white;
+  }
+  .fang>li>a>span{
+    margin-left: 20px;
   }
   .fang>li:nth-child(1){
     background-image: url(http://www.fooju.cn/fjw/uploads/encyType/20170829/59a4cd9f6d206.png) ;

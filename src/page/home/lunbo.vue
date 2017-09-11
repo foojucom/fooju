@@ -2,31 +2,21 @@
   <div class="page-swipe">
     <mt-swipe :auto="2000" class="mint-swipe">
       <mt-swipe-item>
-        <div class="ll">
-          <search></search>
-        </div>
-        <!--<img src="http://www.fooju.cn//fjw/uploads/ad/20170829/59a4d284d95c6.png" alt="">-->
+        <div class="ll"></div>
       </mt-swipe-item>
       <mt-swipe-item>
-        <div class="ll">
-          <search></search>
-        </div>
-        <!--<img src="http://www.fooju.cn//fjw/uploads/ad/20170829/59a4d284d95c6.png" alt="">-->
+        <div class="ll"></div>
       </mt-swipe-item>
     </mt-swipe>
   </div>
 </template>
 
 <script>
-  import search from './search.vue'
   export default {
     data () {
       return {
 
       }
-    },
-    components: {
-      search
     }
   }
 </script>

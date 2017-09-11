@@ -15,7 +15,7 @@
     export default{}
 </script>
 
-<style>
+<style scoped>
   .one{
     width: 100%;
     height:115px;
