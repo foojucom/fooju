@@ -10,7 +10,6 @@
       <tuiJian></tuiJian>
       <foot></foot>
     </div>
-    <router-link to="/test">link1</router-link>
   </div>
 </template>
 <script>
@@ -50,10 +49,10 @@
 </script>
 <style>
   .home{
-    width: 400px;
+    width: 100%;
+    height: 100%;
   }
   .home>div{
     height: auto;
-    overflow: scroll;
   }
 </style>

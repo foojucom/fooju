@@ -166,7 +166,7 @@
   }
 
   .pic{
-    width: 133px;
+    width: 30%;
     height: 100px;
     background-color:red;
     float: left;
@@ -178,7 +178,7 @@
   .youu{
     float: left;
     height: 100px;
-    width: 230px;
+    width: 69%;
     margin-top: 5px;
     margin-left: 10px;
   }

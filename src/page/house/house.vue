@@ -1,7 +1,5 @@
 <template>
-  <div>
-
-  </div>
+  <div class="house">看房</div>
 </template>
 <script>
   export default{
