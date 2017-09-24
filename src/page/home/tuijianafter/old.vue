@@ -59,7 +59,7 @@
 
   }
   .min>div{
-    height:108px;
+    height:110px;
     width: 100%;
     margin-top: 6px;
     border-bottom: 1px solid #999;

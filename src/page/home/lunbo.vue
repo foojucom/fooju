@@ -22,6 +22,11 @@
 </script>
 
 <style scoped>
+  .page-swipe{
+    /*height: 287px;*/
+    /*position: relative;*/
+    /*transform: translateY(-50px);*/
+  }
   .ll{
     width: 100%;
     height: 100%;
@@ -35,5 +40,9 @@
   .mint-swipe{
     width: 100%;
     height: 287px;
+  }
+  .aaa{
+    position: fixed;
+    z-index: 100;
   }
 </style>

@@ -11,45 +11,6 @@
 </script>
 
 <style>
-  /*.on{*/
-    /*width: 100%;*/
-    /*height:85px;*/
-    /*position: relative;*/
-    /*background-color: #eee;*/
-  /*}*/
-  /*.tota{*/
-    /*position: absolute;*/
-    /*top:0;*/
-    /*bottom:0;*/
-    /*left: 0;*/
-    /*right: 0;*/
-    /*margin: auto;*/
-    /*width: 100%;*/
-    /*height: 85px;*/
-    /*background-color:white;*/
-    /*border: 1px solid white;*/
-    /*border-radius: 10px;*/
-    /*display: flex;*/
-  /*}*/
-  /*.tota>img{*/
-    /*width:58px;*/
-    /*height: 58px;*/
-    /*margin:15px 25px 0 20px;*/
-  /*}*/
-  /*.tota>span p{*/
-    /*line-height: 8px;*/
-    /*margin-top: 38px;*/
-    /*color: #999;*/
-    /*font-size: 20px;*/
-  /*}*/
-  /*.tota>span p:nth-child(2){*/
-    /*font-size:12px;*/
-    /*color: #999;;*/
-    /*margin-top: 5px;*/
-  /*}*/
-  /*.tota button{*/
-    /*margin: 25px 20px 0 100px ;*/
-  /*}*/
   .on{
     width: 100%;
     height: 85px;
@@ -58,7 +19,7 @@
   }
   .on>img{
     height: 58px;
-    width: 58px;
+    width: 2rem;
     position: absolute;
     top:10px;
     left: 15px;
@@ -76,6 +37,6 @@
   }
   .on>button{
     float: right;
-    margin:25px 15px;
+    margin:25px 1rem;
   }
 </style>

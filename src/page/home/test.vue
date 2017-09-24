@@ -1,13 +1,8 @@
 <template>
-  <div id="first">
-    <p>我是第一个{{msg}}</p>
-    <mt-button @click.native="handleClick">按钮</mt-button>
-    <mt-popup v-model="popupVisible" position="bottom">
-      <div v-for="it in slot">
-        <!--<span v-text="it.flex"></span>-->
-        <span style="padding: 20px;line-height: 50px">{{it}}</span>
-      </div>
-    </mt-popup>
+  <div class="scroll-wrap">
+    <ul class="scroll-content" :style="{ top }">
+      <li v-for="item in prizeList">{{item.name}}</li >
+    </ul>
   </div>
 </template>
 
@@ -15,36 +10,52 @@
   export default {
     data () {
       return {
-        msg: '组件',
-        popupVisible: false,
-        slot: ['2015-01', '2015-02', '2015-03', '2015-04', '2015-05', '2015-06']
-//        slots: [
-//          {
-//            flex: 1,
-//            values: ['2015-01', '2015-02', '2015-03', '2015-04', '2015-05', '2015-06'],
-//            className: 'slot1',
-//            textAlign: 'right'
-//          }, {
-//            divider: true,
-//            content: '-',
-//            className: 'slot2'
-//          }, {
-//            flex: 1,
-//            values: ['2015-01', '2015-02', '2015-03', '2015-04', '2015-05', '2015-06'],
-//            className: 'slot3',
-//            textAlign: 'left'
-//          }
-//        ]
+        prizeList: [
+          { name: '青城率先取消二手房贷款高额代办费' },
+          { name: '第5届呼市十一惠民车展与您相约' },
+          { name: '青城率先取消二手房贷款高额代办费' },
+          { name: '第5届呼市十一惠民车展与您相约' },
+          { name: '青城率先取消二手房贷款高额代办费' },
+          { name: '第5届呼市十一惠民车展与您相约' }
+        ],
+        activeIndex: 0
       }
     },
-    methods: {
-      handleClick: function () {
-        this.popupVisible = true
+    computed: {
+      top () {
+        return -this.activeIndex * 25 + 'px'
       }
+    },
+    mounted () {
+      setInterval(_ => {
+        if (this.activeIndex < this.prizeList.length) {
+          if (this.activeIndex > 3) {
+            this.activeIndex = 0
+          }
+          this.activeIndex += 1
+        } else {
+          this.activeIndex = 0
+        }
+      }, 1000)
     }
   }
 </script>
 
 <style>
+  .scroll-wrap{
+    width: 400px;
+    height: 50px;
+    border: 1px solid blue;
+    overflow: hidden;
+  }
 
+  .scroll-content{
+    position: relative;
+    transition: top 0.5s;
+
+  li{
+    line-height: 50px;
+    text-align: center;
+  }
+  }
 </style>

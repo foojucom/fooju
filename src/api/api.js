@@ -4,6 +4,7 @@
 const serverUrl = 'http://www.fooju.cn/fjw/api.php?'
 export default {
   serverUrl: 'http://www.fooju.cn/',
+  map: 'http://online0.map.bdimg.com/tile/?qt=tile',
   login: serverUrl + 's=Login/login', /* 登录 */
   register: serverUrl + 's=Login/register', /* 注册 */
   used_lists: serverUrl + 's=Product/used_lists', /* 二手房列表 */
@@ -20,6 +21,7 @@ export default {
   Storelists: serverUrl + 's=Store/lists', /* 会员详情 */
   Storedetail: serverUrl + 's=Store/detail', /* 会员详情 */
   EncyTop: serverUrl + 's=Ency/encyTop',
+  OrderHouse: serverUrl + 's=Record/yuekan_add', /* 预约看房 */
   EncyType: serverUrl + 's=Ency/encyType', /* 百科分类 */
   EncyList: serverUrl + 's=Ency/encyList', /* 百科分类列表 */
   EncyDetail: serverUrl + 's=Ency/encyDetail', /* 百科分类详情 */
@@ -50,7 +52,7 @@ export default {
   RecordDK: serverUrl + 's=Record/daikan_add', /* 添加预约看房 */
   NewList: serverUrl + 's=Product/new_lists', /* 新房列表 */
   New_Detail: serverUrl + 's=Product/new_detail', /* 新房详情 */
-  AgentListsByHouse: serverUrl + 's=Agent/lists_by_house', /* 预约看房经纪人 */
+  lists_by_house: serverUrl + 's=Agent/lists_by_house', /* 预约看房经纪人 */
   OperationMysuer: serverUrl + 's=Operation/userCollectAgent', /* 我的经纪人 */
   OperationAgentCollect: serverUrl + 's=Operation/agentCollect', /* 收藏经纪人 */
   OperationAgentCollectCancel: serverUrl + 's=Operation/agentCollectCancel', /* 取消收藏经纪人 */

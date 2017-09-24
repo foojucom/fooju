@@ -1,4 +1,4 @@
-<template>
+``<template>
   <div class="list">
     <div>
       <router-link to="/ershou"><img src="http://m.fooju.cn/static/img/P4/ios/10@2x.png" alt=""><div>二手房</div></router-link>
@@ -16,7 +16,10 @@
 </template>
 
 <script>
-    export default{}
+    export default{
+      methods: {
+      }
+    }
 </script>
 
 <style>
@@ -36,7 +39,7 @@
     text-decoration:none;
   }
   .list>div>a>img{
-    width: 38px;
-    height: 33px;
+    width: 2.7rem;
+    height: 2rem;
   }
 </style>

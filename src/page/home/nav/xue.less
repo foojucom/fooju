@@ -1,0 +1,82 @@
+.header{
+  height: 40px;
+  //border: 1px solid red;
+}
+.header>img{
+  float: left;
+  margin: 10px 5px;
+}
+.header>div{
+  display: flex;
+  margin-top: 8px;
+}
+.header>div>span{
+  flex: 1;
+  text-align: center;
+  font-size: 18px;
+}
+.header>div>span.active{
+  border-bottom: 1px solid red;
+  color: red;
+}
+//.ss{
+//  border-bottom: 1px solid red;
+//  color: red;
+//}
+img{
+  width: 20px;
+  height: 20px;
+}
+.nav>div:nth-child(1){
+  display: flex;
+  margin-top: 10px;
+}
+.nav{
+  position: relative;
+}
+.nav>div:nth-child(2){
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: 10;
+  background-color: #fff;
+}
+.nav>div>span{
+  flex: 1;
+  text-align: center;
+}
+.nav>div>p{
+  height: auto;
+  overflow: hidden;
+}
+#img{
+  width: 132px;
+  height: 99px;
+  float: left;
+  margin-top: 10px;
+}
+.loop{
+  margin: 10px 0;
+  padding: 0;
+}
+.loop p{
+  margin: 10px 0;
+  color: #999999;
+  font-size: 14px;
+}
+.loop>li{
+  height: 115px;
+  border-bottom: 1px solid #eee;
+}
+.loop>li>div{
+  margin-top: 10px;
+}
+.dropDown-enter{
+  height: 0;
+}
+.dropDown-enter-to{
+  height: auto;
+}
+.dropDown-enter-active,.dropDown-leave-active{
+  transform: all 2s ease;
+}

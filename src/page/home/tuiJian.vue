@@ -73,16 +73,18 @@
     float: left;
     width:85px;
     height: 33px;
-    margin: 0 20px;
+    margin: 0 1.5rem;
     border: 1px solid red;
     background-color:white;;
     border-radius: 10px;
     font-weight: 600;
     color: red;
+    outline-style: none;
   }
   .btn>button.active{
     background-color:red;
     color: white;
+    /*border: 0px;*/
   }
   .section>button{
     display: none;

@@ -30,7 +30,7 @@
     left: 0;
     right: 0;
     margin: auto;
-    width: 355px;
+    width: 90%;
     height: 85px;
     background-color:white;
     border: 1px solid white;
@@ -45,6 +45,7 @@
   .total>span p{
     line-height: 8px;
     margin-top: 28px;
+    width: 100px;
   }
   .total>span p:nth-child(2){
     font-size:12px;
@@ -52,6 +53,6 @@
     margin-top: 5px;
   }
   .total button{
-    margin: 25px 20px 0 60px ;
+    margin: 25px 1rem 0 18%;
   }
 </style>

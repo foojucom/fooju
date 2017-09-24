@@ -7,11 +7,11 @@
       </div>
       <div class="min">
         <ul class="fang">
-          <li><a href=""><span>二手房</span></a></li>
-          <li><a href=""><span>新房</span></a></li>
-          <li><a href=""><span style="margin-left: 5px">购房宝典</span></a></li>
-          <li><a href=""><span>租房</span></a></li>
-          <li><a href=""><span>换房</span></a></li>
+          <li><router-link to="/bakeOld"><span>二手房</span></router-link></li>
+          <li><router-link to=""><span>新房</span></router-link></li>
+          <li><router-link to=""><span style="margin-left: 5px">购房宝典</span></router-link></li>
+          <li><router-link to=""><span>租房</span></router-link></li>
+          <li><router-link to=""><span>换房</span></router-link></li>
         </ul>
       </div>
     </div>
@@ -19,10 +19,10 @@
 </template>
 
 <script>
-    export default{}
+  export default{}
 </script>
 
-<style>
+<style scoped>
   .bai{
     height:137px;
     width: 100%;
@@ -40,9 +40,9 @@
   }
   .fang>li{
     display: inline-block;
-    margin: 0 3px;
+    margin: 0 0.3rem;
     list-style: none;
-    width: 64px;
+    width: 4.2rem;
     height: 54px;
     line-height: 54px;
     background-size:64px 54px;

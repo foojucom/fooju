@@ -1,10 +1,11 @@
 <template>
   <div class="home">
-    <div>
+    <div id="zz">
       <ap></ap>
       <app></app>
-      <lunBo></lunBo>
-      <bodyNav></bodyNav>
+      <!--<lunBo></lunBo>-->
+      <lunbotu id="lunbotu"></lunbotu>
+      <bodyNav id="bodyNav"></bodyNav>
       <touTiao></touTiao>
       <baiKe></baiKe>
       <tuiJian></tuiJian>
@@ -17,6 +18,7 @@
   import ap from './app.vue'
   import app from './header-app.vue'
   import lunBo from './lunbo.vue'
+  import lunbotu from './lunbotu.vue'
   import bodyNav from './nav/list.vue'
   import touTiao from './toutiao.vue'
   import baiKe from './baiKe.vue'
@@ -32,6 +34,7 @@
       ap,
       app,
       lunBo,
+      lunbotu,
       bodyNav,
       touTiao,
       baiKe,
@@ -50,10 +53,41 @@
 </script>
 <style>
   .home{
-    width: 400px;
+    width: 27rem;
+    margin: auto;
   }
-  .home>div{
+  @media screen and (max-width: 2048px)and (min-width: 1024px){
+    .home{ width: 768px}
+  }
+  @media screen and (max-width: 1024px)and (min-width: 768px){
+    .home{ width: 768px}
+  }
+  @media screen and (max-width: 768px) and (min-width: 480px){
+    .home{ width: 27rem; }
+  }
+  @media screen and (max-width: 480px) and (min-width: 320px){
+    .home{ width: 27rem; }
+  }
+  @media screen and (max-width: 320px) and (min-width: 240px){
+    .home{ width: 27rem; }
+  }
+  @media screen and (max-width: 240px) {
+    .home{ width: 27rem; }
+  }
+  #zz{
     height: auto;
     overflow: scroll;
+  }
+  #appafter{
+    float: left;
+    /*z-index: 1;*/
+  }
+  #lunbotu{
+    z-index: 10;
+    display: block;
+    width: 100%;
+  }
+  #bodyNav{
+    /*margin-top: 310px;*/
   }
 </style>

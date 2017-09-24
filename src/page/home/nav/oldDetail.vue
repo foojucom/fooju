@@ -1,9 +1,9 @@
 <template>
-  <div style="background-color: #eee;width: 100%">
+  <div style="background-color: #eee">
     <div v-for="item in list">
       <div>
         <div class="fan">
-          <i class="fanHui"></i>
+          <i class="fanHui" @click="$router.go(-1)"></i>
         </div>
         <div class="lunbo"></div>
         <p class="title">{{item.title}}</p>
@@ -46,7 +46,7 @@
           </li>
           <li>
             <span>房源编号：</span>
-            <span>{{item.number}}</span>
+            <span id="num">{{item.number}}</span>
           </li>
           <li>
             <span>小区:</span>
@@ -133,17 +133,53 @@
         </div>
       </div>
     </div>
+    <div class="bottom">
+      <div @click="attention()" v-show="aa">
+        <img src="../img/xin.png" alt="" id="xin">
+        <span id="follow">关注</span>
+      </div>
+      <div v-show="bb" @click="attention()">
+        <img src="../img/xinRed.png" alt="" id="xin">
+        <span id="follow">取消关注</span>
+      </div>
+      <div class="fang">
+        <span @click="see" id="Order">预约看房</span>
+      </div>
+      <div class="agent">
+        <span @click="agent">资讯经纪人</span>
+      </div>
+    </div>
+    <mt-popup
+      v-model="popupVisible"
+      position="bottom"
+      popup-transition="popup-fade" id="max">
+      <div class="bespoke">
+        <span>预约操作</span>
+        <span>关闭</span>
+      </div>
+      <div class="continue">
+        <div><span class="continueOne" @click="goGo">继续看房</span></div>
+        <div><span class="continueTwo" @click="bill">预约看房时间</span></div>
+      </div>
+    </mt-popup>
   </div>
 </template>
 
 <script>
-  import {usedDetail} from '../../../api/config'
+  import {Toast} from 'mint-ui'
+  import {usedDetail, OrderHouse} from '../../../api/config'
   export default{
     data () {
       return {
         id: 16140,
         list: [],
         arr: [],
+        aa: true,
+        bb: false,
+        red: 1,
+        popupVisible: false,
+        order: 0,
+        number: '',
         jilu: []
       }
     },
@@ -153,12 +189,67 @@
     methods: {
       getData () {
         var self = this
+        this.id = this.$route.query.id
+//        var IDS = sessionStorage.getItem('id')
+//        console.log(IDS)
+//        console.log(this.$route.params)
         usedDetail({id: this.id}).then(function (res) {
-          console.log(res.data.data)
+//          console.log(res.data.data)
           self.list = res.data.data.fangyuanxinxi
           self.arr = res.data.data.tuijian
           self.jilu = res.data.data.daikanjilu
         })
+      },
+      getOrderMsg () {
+//        var self = this
+        OrderHouse({}).then(function (res) {
+
+        })
+      },
+      agent () {
+        this.$router.push('/testt')
+      },
+      attention () {
+        if (this.red === 1) {
+          Toast({
+            message: '关注成功',
+            duration: 1000
+          })
+          this.aa = false
+          this.bb = true
+          this.red = 0
+        } else {
+          Toast({
+            message: '取消关注',
+            duration: 1000
+          })
+          console.log(6666666666)
+          this.aa = true
+          this.bb = false
+          this.red = 1
+        }
+      },
+      see () {
+        this.$store.commit('order', this.order)
+        Toast({
+          message: '已预约',
+          duration: 1000
+        })
+        document.getElementById('Order').innerHTML = '已预约'
+        Toast({
+          message: '以为你添加到预约清单',
+          duration: 1000
+        })
+        this.popupVisible = true
+      },
+      goGo () {
+        this.$router.push('/ershou')
+      },
+      bill () {
+        var num = document.getElementById('num').innerHTML
+        console.log(typeof num)
+        sessionStorage.setItem('orderNum', num)
+        this.$router.push('/bill')
       }
     }
   }
@@ -340,5 +431,73 @@
   }
   .tle{
     font-size: 15px;
+  }
+  .bottom{
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    position: fixed;
+    bottom: 0px;
+    display: flex;
+    border-top: 1px solid #999;
+    background-color: #fff;
+  }
+  .bottom>div{
+    flex: 1;
+    text-align: center;
+  }
+  .fang{
+    background-color: #3533ff;
+  }
+  .agent{
+    background-color: #ff463d;
+  }
+  .bottom>div>span{
+    color: white;
+    font-weight: 600;
+  }
+  #follow{
+    color: black;
+    font-weight: 400;
+  }
+  #xin{
+    width: 20px;
+    height: 20px;
+    transform: translateY(3px);
+  }
+  #max{
+    width: 100%;
+    height: auto;
+  }
+  .bespoke{
+    height: 30px;
+  }
+  .bespoke>span:nth-child(1){
+    float: left;
+    margin: 10px;
+  }
+  .bespoke>span:nth-child(2){
+    float: right;
+    margin: 10px;
+  }
+  #max>div:nth-child(2){
+    height: 60px;
+    width: 100%;
+    line-height: 60px;
+    display: flex;
+    border-top: 1px solid #eee;
+  }
+  .continue>div{
+    flex: 1;
+    text-align: center;
+  }
+  .continueOne{
+    padding: 10px;
+    border: 1px solid #eee;
+  }
+  .continueTwo{
+    padding: 10px;
+    background-color: #18106e;
+    color: white;
   }
 </style>
