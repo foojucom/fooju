@@ -52,13 +52,10 @@
 </script>
 <style>
   .home{
-<<<<<<< HEAD
     width: 27rem;
     margin: auto;
-=======
-    width: 100%;
-    height: 100%;
->>>>>>> 27e9cb28f62eb0660b490e3dab870bb361cd1014
+    /*width: 100%;*/
+    /*height: 100%;*/
   }
   @media screen and (max-width: 2048px)and (min-width: 1024px){
     .home{ width: 768px}

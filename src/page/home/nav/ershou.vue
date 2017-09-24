@@ -118,12 +118,12 @@
       <span>排序</span>
     </mt-button>
     <mt-popup v-model="popupVisible" position="bottom" model="false" id="ggg">
-      <p id="item" v-on:click="change('默认排序')">默认排序</p>
-      <p id="item" v-on:click="change('最新发布')">最新发布</p>
-      <p id="item" v-on:click="change('总价从低到高')">总价从低到高</p>
-      <p id="item" v-on:click="change('总价从高到低')">总价从高到低</p>
-      <p id="item" v-on:click="change('面积从低到高')">面积从低到高</p>
-      <p id="item" v-on:click="change('面积从高到低')">面积从高到低</p>
+      <p class="item" v-on:click="change('默认排序')">默认排序</p>
+      <p class="item" v-on:click="change('最新发布')">最新发布</p>
+      <p class="item" v-on:click="change('总价从低到高')">总价从低到高</p>
+      <p class="item" v-on:click="change('总价从高到低')">总价从高到低</p>
+      <p class="item" v-on:click="change('面积从低到高')">面积从低到高</p>
+      <p class="item" v-on:click="change('面积从高到低')">面积从高到低</p>
     </mt-popup>
   </div>
 </template>
@@ -449,7 +449,7 @@
     margin: -28px 5px;
     font-size: 18px;
   }
-  #item{
+  .item{
     /*line-height: 65px;*/
     font-size: 20px;
     /*padding: 0px 200px;*/
