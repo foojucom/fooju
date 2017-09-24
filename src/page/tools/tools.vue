@@ -1,5 +1,5 @@
 <template>
-<div>tool看能不能上传</div>
+<div class="tools">tool看能不能上传</div>
 </template>
 <script>
   export default{}

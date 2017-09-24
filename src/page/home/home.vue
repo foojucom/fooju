@@ -11,7 +11,6 @@
       <tuiJian></tuiJian>
       <foot></foot>
     </div>
-    <router-link to="/test">link1</router-link>
   </div>
 </template>
 <script>
@@ -53,8 +52,13 @@
 </script>
 <style>
   .home{
+<<<<<<< HEAD
     width: 27rem;
     margin: auto;
+=======
+    width: 100%;
+    height: 100%;
+>>>>>>> 27e9cb28f62eb0660b490e3dab870bb361cd1014
   }
   @media screen and (max-width: 2048px)and (min-width: 1024px){
     .home{ width: 768px}
@@ -76,7 +80,6 @@
   }
   #zz{
     height: auto;
-    overflow: scroll;
   }
   #appafter{
     float: left;

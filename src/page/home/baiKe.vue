@@ -36,7 +36,6 @@
   }
   .fang{
     float: left;
-    margin-left: -23px;
   }
   .fang>li{
     display: inline-block;

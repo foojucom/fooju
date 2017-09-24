@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="index">
     <router-view></router-view>
     <mt-tabbar v-model="selected" class="tabber">
       <mt-tab-item id="tab1">
@@ -8,7 +8,7 @@
       </mt-tab-item>
       <mt-tab-item id="tab2">
         <img slot="icon" src="../../assets/logo.png">
-        <router-link to="/main/tools">工具</router-link>
+        <router-link to="/main/tools" id="tools">工具</router-link>
       </mt-tab-item>
       <mt-tab-item id="tab3">
         <img slot="icon" src="../../assets/logo.png">
@@ -34,5 +34,11 @@
   .tabber{
     position: fixed;
     bottom: 0;
+  }
+  .index .mint-tabbar{
+    height: 50px;
+  }
+  .index .home,.index .house,.index .my,.index .tools{
+    margin-bottom: 50px;
   }
 </style>
